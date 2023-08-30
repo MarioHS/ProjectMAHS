@@ -6,16 +6,12 @@ import java.awt.geom.Area;
 public class Main {
     public static void main(String[] args) {
 
-        Circulo circulo = new Circulo();
-        circulo.setRadio(2.57);
+        Tiempo tiempo = new Tiempo();
+        tiempo.setHoras(5);
+        tiempo.setMinutos(34);
+        tiempo.setSegundos(27);
 
-        Rectángulo rectángulo = new Rectángulo();
-        rectángulo.setLado1(13);
-        rectángulo.setLado2(6);
+        JOptionPane.showMessageDialog(null, tiempo.toString());
 
-        //Mensaje de prueba
-
-        JOptionPane.showMessageDialog(null,"El area del circulo es: " + circulo.calcularArea() +
-                "\n y del rectangulo es: " + rectángulo.calcularArea());
         }
     }
