@@ -3,7 +3,7 @@ package org.example;
 public class Tiempo {
     private int horas, minutos, segundos;
 
-    public int getHoras(int i) {
+    public int getHoras() {
         return horas;
     }
 
@@ -11,7 +11,7 @@ public class Tiempo {
         this.horas = horas;
     }
 
-    public int getMinutos(int i) {
+    public int getMinutos() {
         return minutos;
     }
 
@@ -19,7 +19,7 @@ public class Tiempo {
         this.minutos = minutos;
     }
 
-    public int getSegundos(int i) {
+    public int getSegundos() {
         return segundos;
     }
 
@@ -30,5 +30,17 @@ public class Tiempo {
     @Override
     public String toString() {
         return this.horas + "h " +  this.minutos + "m " + this.segundos + "s ";
+    }
+
+    public static Tiempo sumartiempo(Tiempo tiempo1, Tiempo tiempo2){
+        Tiempo tiempor = new Tiempo();
+
+        tiempor.setHoras(tiempo1.getHoras()+tiempo2.getHoras());
+        tiempor.setMinutos(tiempo1.getMinutos() + tiempo2.getMinutos());
+
+        tiempor.setSegundos(tiempo1.getSegundos() + tiempo2.getSegundos());
+        //Sumar los segundos y dividirlos entre sesenta, el resultante convertirlo en entero y
+
+        return tiempo1;
     }
 }
