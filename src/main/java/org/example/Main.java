@@ -30,12 +30,28 @@ public class Main {
                     listaClientes.add(cliente);
                     break;
                 case 2:
-
+                    Empleado empleado = new Empleado();
+                    List<Empleado>listaEmpleados = new ArrayList<>();
+                    empleado.setNombre(JOptionPane.showInputDialog("Ingrese el nombre del empleado: "));
+                    empleado.setEdad(Integer.parseInt(JOptionPane.showInputDialog("Ingrese la edad del empleado: ")));
+                    empleado.setDireccion(JOptionPane.showInputDialog("Ingrese su direccion: "));
+                    empleado.setNumEmpleado(Integer.parseInt(JOptionPane.showInputDialog("Ingrese el numero de empleado: ")));
+                    empleado.setHorario(JOptionPane.showInputDialog("Ingrese su horario: "));
+                    empleado.setSalario(Double.parseDouble(JOptionPane.showInputDialog("Ingrese su salario: ")));
+                    listaEmpleados.add(empleado);
                     break;
                 case 3:
-
+                    Manager manager = new Manager();
+                    List<Manager>listManager = new ArrayList<>();
+                    manager.setNombre(JOptionPane.showInputDialog("Ingrese el nombre del manager: "));
+                    manager.setEdad(Integer.parseInt(JOptionPane.showInputDialog("Ingrese la edad: ")));
+                    manager.setDireccion(JOptionPane.showInputDialog("Ingrese la direccion del manager"));
+                    manager.setRFC(JOptionPane.showInputDialog("Ingrese su RFC: "));
+                    manager.setNumEmpleado(Integer.parseInt(JOptionPane.showInputDialog("Ingrese el numero del empleado")));
+                    listManager.add(manager);
                     break;
                 case 4:
+                    int numeroAfiliado = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el numero de afiliacion del cliente que quiere eliminar"));
 
                     break;
                 case 5:
